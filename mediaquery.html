@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script src="./mediaquery.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — MIKEY</title>
+  <style>
+    
+     :root{
+      --bg:#f7f7f9;
+      --card:#ffffff;
+      --accent:#0b74ff;
+      --text:#111114;
+      --muted:#556;
+      --radius:12px;
+      --gap:1rem;
+    }
+
+  
+    *{
+      box-sizing:border-box
+    }
+
+    html,body{
+      height:100%;
+    }
+
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background:var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.4;
+    }
+
+    
+    .page-wrap{
+      max-width:1200px; 
+      margin:0 auto;
+      padding:1rem;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0.75rem 0;
+    }
+
+    .brand{
+      font-weight:700;
+      font-size:1.1rem;
+      letter-spacing:0.2px;
+    }
+
+   
+    nav{
+      display:flex;
+      align-items:center;
+      gap:1rem;
+    }
+
+    .nav-links{
+      display:none;
+    } 
+
+    .hamburger{
+      border:0;
+      background:transparent;
+      font-size:1.25rem;
+      cursor:pointer;
+      padding:6px 8px;
+      border-radius:8px;
+    }
+
+    .mobile-menu{
+      display:none;
+      position:absolute;
+      inset:60px 12px auto 12px;
+      background:var(--card);
+      box-shadow:0 6px 24px rgba(12,20,40,0.12);
+      border-radius:10px;
+      padding:0.75rem 1rem;
+    }
+
+    .mobile-menu a{
+      display:block;
+      padding:8px 0;
+      text-align:center;
+      color:var(--text);
+      text-decoration:none
+    }
+
+   
+    .hero{
+      display:block;
+      gap:1rem;
+      margin-top:1rem;
+    }
+
+    .hero-image{
+      width:100%;
+      height:auto;
+      border-radius:var(--radius);
+      display:block;
+      object-fit:cover;
+    }
+
+    .hero-content h1{
+      margin:0.5rem 0;
+      font-size:1.7rem
+    }
+
+    .hero-content p{
+      margin:0.5rem 0;
+      color:var(--muted)
+    }
+
+    .btn{
+      display:inline-block;
+      padding:0.5rem 0.9rem;
+      border-radius:8px;
+      border:0;
+      background:var(--accent);
+      color:#fff;
+      text-decoration:none;
+      font-weight:600;
+      margin-top:0.6rem;
+    }
+
+    
+    section{
+      margin:1.25rem 0
+    }
+
+    .section-title{
+      font-weight:700;
+      margin-bottom:0.75rem;
+      text-align:center
+    }
+
+    
+    .skills{
+      display:grid;
+      grid-template-columns:1fr; 
+      gap:1rem;
+      text-align:center;
+    }
+
+    .skill-card{
+      background:var(--card);
+      padding:1rem;
+      border-radius:10px;
+      box-shadow:0 6px 18px rgba(12,20,40,0.06);
+    }
+
+    
+    .projects{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:1rem;
+      align-items:stretch;
+    }
+
+    .project-card{
+      background:var(--card);
+      border-radius:10px;
+      padding:1rem;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      box-shadow:0 6px 18px rgba(12,20,40,0.06);
+      transition:transform .22s ease,box-shadow .22s ease;
+    }
+
+    .project-card h3{
+    margin:0 0 0.35rem
+    }
+
+    .project-card p{
+    margin:0 0 1rem;
+    color:var(--muted)
+    }
+
+    .project-card .actions{
+    margin-top:auto
+    }
+
+    
+    footer{
+    padding:1rem 0;
+    text-align:center;
+    color:var(--muted);
+    font-size:0.95rem}
+
+   
+    @media (min-width:600px){
+      .hamburger{display:none
+      } 
+      .nav-links{display:flex;gap:1rem
+      }
+      .mobile-menu{display:none !important
+      }
+
+      .hero{
+        display:flex;
+        align-items:center;
+        gap:1rem;
+        text-align:left; 
+      }
+
+      .hero-image{
+      width:50%;height:320px
+      }
+
+      .hero-content{
+      width:50%
+      }
+
+      .skills{
+      grid-template-columns:repeat(2,1fr)
+      }
+
+      .projects{
+      grid-template-columns:repeat(2,1fr)
+      }
+
+    }
+
+    
+    @media (min-width:900px)
+    {
+       header{padding:1.25rem 0
+      }
+      .page-wrap{padding:2rem
+      }
+
+   
+      nav{
+      gap:1.25rem
+      }
+
+      .brand{
+      font-size:1.25rem
+      }
+
+      .hero-content h1{
+      font-size:3rem
+      } 
+
+      .hero-content p{
+      font-size:1.3rem
+      } 
+
+      .btn{
+      padding:0.85rem 1.2rem;
+      font-size:1rem;
+      border-radius:12px
+      }
+
+      .hero-image{height:420px}
+
+      .skills{
+      grid-template-columns:repeat(3,1fr)
+      }
+
+      .projects{
+      grid-template-columns:repeat(3,1fr)
+      }
+
+     
+      .project-card:hover{
+
+      transform:translateY(-6px) scale(1.02);
+      box-shadow:0 18px 40px rgba(12,20,40,0.14)
+      }
+    }
+
+ 
+    a.btn:active{
+    transform:translateY(1px)
+    } 
+
+  </style>
+</head>
+<body>
+  <div class="page-wrap">
+    <header>
+      <div class="brand">MIKEY</div>
+
+      <nav>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+
+        <button class="hamburger" aria-label="Open menu" id="hamburger">☰</button>
+      </nav>
+
+      <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <a href="#home">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </header>
+
+
+    <main id="home">
+      <section class="hero">
+        <img class="hero-image" src="FIGURE-129133_02.jpg" alt="Your photo">
+        <div class="hero-content">
+          <h1>Hi, I'm MIKEY</h1>
+          <p>I'm a web developer who builds clean, responsive websites and delightful user experiences. I focus on front-end development, responsive design and converting ideas into usable products.</p>
+          <a class="btn" href="#projects">View my work</a>
+        </div>
+      </section>
+
+   
+      <section id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills">
+          <div class="skill-card"><h3>HTML &amp; CSS</h3><p>Semantic markup and modern CSS techniques.</p></div>
+          <div class="skill-card"><h3>JavaScript</h3><p>Vanilla JS + frameworks when needed.</p></div>
+          <div class="skill-card"><h3>Responsive Design</h3><p>Mobile-first and accessible interfaces.</p></div>
+        </div>
+      </section>
+
+    
+      <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects">
+          <article class="project-card">
+            <div>
+              <h3>Project One</h3>
+              <p>A short description of project one — what it does and the stack used.</p>
+            </div>
+            <div class="actions">
+              <a class="btn" href="#">View Project</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <h3>Project Two</h3>
+              <p>A short description of project two — what it does and the stack used.</p>
+            </div>
+            <div class="actions">
+              <a class="btn" href="#">View Project</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <h3>Project Three</h3>
+              <p>A short description of project three — what it does and the stack used.</p>
+            </div>
+            <div class="actions">
+              <a class="btn" href="#">View Project</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+  
+      <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div style="text-align:center;">
+          <p>Want to work together? <a href="zen.mikey1903@gmail.com">zen.mikey1903@gmail.com</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Your Name — Built with care
+    </footer>
+  </div>
+
+  <!-- <script>
+   r
+    const btn = document.getElementById('hamburger');
+    const menu = document.getElementById('mobileMenu');
+    btn && btn.addEventListener('click', ()=>{
+      const shown = menu.getAttribute('aria-hidden') === 'false';
+      menu.style.display = shown ? 'none' : 'block';
+      menu.setAttribute('aria-hidden', shown ? 'true' : 'false');
+    });
+
+    
+    document.addEventListener('click',(e)=>{
+      if(!btn) return;
+      if(e.target !== btn && !menu.contains(e.target) && !btn.contains(e.target)){
+        menu.style.display = 'none';
+        menu.setAttribute('aria-hidden','true');
+      }
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script> -->
+</body>
+</html>

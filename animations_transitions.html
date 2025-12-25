@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> 
+            ANIMATIONS AND TRANSITIONS
+        </title> 
+        <meta>
+        </meta>   
+    </head>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 50px;
+            border-radius: 100px;
+            animation: moveit 15s linear infinite;
+        }
+
+        @keyframes moveit {
+            0% {
+                transform: rotate(0deg); 
+                transform: translateY(0px);
+                background-color: blue;
+            
+            }
+            50% {
+
+                transform: translateX(200px); 
+                background-color: red;
+              
+            
+            }
+            75% {
+
+                 transform:scale(100px); 
+                 background-color: green;
+                 
+                
+             }
+            100% {
+
+                 transform: translateX(100px); 
+                 background-color: rgb(230, 171, 43);
+                 
+                
+             }
+        }
+        
+    </style>
+    <body>
+       <div class="box"></div>
+       <img src="/Users/mikey/Downloads/513599047_24070494889255825_206387561481575066_n.jpg" alt="Animated Image">
+       
+       
+   
+    
+    </body></html>
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Funny Blob</title>
+<style>
+body {
+  background:#f7f7f7;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  overflow:hidden;
+  font-family:sans-serif;
+}
+
+.blob {
+  width:150px;
+  height:150px;
+  background:#ff6ec7;
+  border-radius:50%;
+  animation:wiggle 5s infinite ease-in-out;
+  box-shadow:0 0 100px rgba(9, 4, 7, 0.6);
+}
+
+@keyframes wiggle {
+  0% 
+  { transform:translate(0,0) scale(1); 
+    border-radius:50% 50% 50% 50%; }
+  25% 
+  { transform:translate(20px,-10px) scale(1.1);
+     border-radius:60% 40% 50% 50%; }
+  50% { 
+    transform:translate(-20px,20px) scale(0.9); 
+    border-radius:50% 60% 40% 50%; }
+  75% { 
+    transform:translate(10px,20px) scale(1.05); 
+    border-radius:40% 50% 60% 50%; }
+  100% { transform:translate(0,0) scale(1); 
+    border-radius:50% 50% 50% 50%; }
+}
+/* h1 {
+  position:absolute;
+  bottom:40px;
+  font-size:32px;
+  color:#444;
+  animation:jump 1.5s infinite;
+} */
+
+
+@keyframes jump {
+  0% 
+  { transform:(0); 
+}
+  50% { 
+    transform:translateY(-10px); 
+}
+  100% { 
+    transform:translateY(0); 
+}
+}
+</style>
+</head>
+<body>
+<div class="blob"></div>
+<h1>boing boing blob</h1>
+
+</body>
+</html>
